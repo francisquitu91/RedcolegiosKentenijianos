@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- Logo placeholder Co-crecer -->
+  <text x="10" y="28" font-family="Inter, sans-serif" font-size="24" font-weight="300" fill="#333333">
+    co-crecer
+  </text>
+  <!-- Garabato decorativo -->
+  <path d="M5 12 Q 15 5, 25 12 T 45 12" stroke="#5C8BC0" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
