@@ -13,7 +13,8 @@ const AVAILABLE_VIDEOS = [
   '/assets/113343-697717990.mp4',
 ];
 
-export const HeroSection: React.FC<HeroProps> = ({ content }) => {
+export const HeroSection: React.FC<HeroProps> = ({ content: _content }) => {
+  void _content; // Reservado para uso futuro
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const currentVideo = AVAILABLE_VIDEOS[currentVideoIndex];
 

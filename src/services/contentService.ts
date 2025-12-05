@@ -62,17 +62,18 @@ export const getHeroData = async (): Promise<HeroContent | null> => {
   }
 
   // Extraer hero_data del contenido JSON
-  const content = data?.content as { hero?: HeroContent } | null;
-  return content?.hero || null;
+  const pageData = data as { content?: { hero?: HeroContent } } | null;
+  return pageData?.content?.hero || null;
 };
 
 /**
  * Obtiene todo el contenido de la página
  */
-export const getPageContent = async (slug: string = 'home'): Promise<{
+export const getPageContent = async (_slug: string = 'home'): Promise<{
   navigation: NavigationItem[];
   hero: HeroContent | null;
 }> => {
+  void _slug; // Reservado para uso futuro con diferentes páginas
   const [navigation, hero] = await Promise.all([
     getNavigationItems(),
     getHeroData(),

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavigationItem, HeroContent, PageContent } from '../types';
+import { NavigationItem, HeroContent } from '../types';
 
 // Datos mock para desarrollo (simula respuesta de Supabase)
 const mockNavigationItems: NavigationItem[] = [
