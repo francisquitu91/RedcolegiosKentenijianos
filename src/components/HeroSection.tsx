@@ -32,6 +32,7 @@ export const HeroSection: React.FC<HeroProps> = ({ content: _content }) => {
           loop
           muted
           playsInline
+          preload="auto"
           className="hero-video"
         >
           <source src={currentVideo} type="video/mp4" />

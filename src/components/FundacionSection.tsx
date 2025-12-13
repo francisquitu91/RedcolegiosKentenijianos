@@ -180,6 +180,7 @@ export const VideoParallaxSection: React.FC = () => {
           muted
           loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
           style={{
             position: 'fixed',

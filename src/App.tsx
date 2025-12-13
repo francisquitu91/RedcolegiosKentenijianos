@@ -1,20 +1,9 @@
 import React from 'react';
-import { Navbar, HeroSection, FundacionSection, VideoParallaxSection, EditorialSection, ContactSection } from './components';
+import { Navbar, HeroSection, FundacionSection, VideoParallaxSection, EditorialSection, ContactSection, VideoParallaxSection2, TeamSection } from './components';
 import { useContent } from './hooks/useContent';
 
 const App: React.FC = () => {
-  const { navigation, hero, isLoading, error } = useContent();
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 border-4 border-brand-primary border-t-transparent rounded-full animate-spin" />
-          <p className="text-brand-text text-lg">Cargando...</p>
-        </div>
-      </div>
-    );
-  }
+  const { navigation, hero, error } = useContent();
 
   if (error) {
     return (
@@ -43,6 +32,12 @@ const App: React.FC = () => {
 
       {/* Sección Editorial con bloques */}
       <EditorialSection />
+
+      {/* Segunda sección de Video Parallax (transición al equipo) */}
+      <VideoParallaxSection2 />
+
+      {/* Sección del Equipo */}
+      <TeamSection />
 
       {/* Sección de Contacto */}
       <ContactSection />
